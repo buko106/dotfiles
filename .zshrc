@@ -1,3 +1,10 @@
+INIT_FILE="$HOME/.dotfiles/init_local.zsh"
+if [ -f "$INIT_FILE" ]; then
+    source $INIT_FILE
+else
+    echo "$INIT_FILE is not found. Setup dotfiles."
+fi
+
 #
 # coreutils
 #
