@@ -26,25 +26,9 @@ eval "$(direnv hook zsh)"
 source "$(ghq list -p zsh-git-prompt/zsh-git-prompt)/zshrc.sh"
 PROMPT='%c$(git_super_status)$ '
 
-#
-# zshで適度なcase-insensitive補完
-# https://qiita.com/watertight/items/2454f3e9e43ef647eb6b の３番目
-#
-zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' '+m:{[:upper:]}={[:lower:]}'
-
-# brew install zsh-completion
-#
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
-
-# Load Angular CLI autocompletion.
-command -v ng>/dev/null && source <(ng completion script)
 
 source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 source $HOME/.dotfiles/zinit.zsh
 source $HOME/.dotfiles/history.zsh
+source $HOME/.dotfiles/completion.zsh
