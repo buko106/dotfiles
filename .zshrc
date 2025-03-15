@@ -45,3 +45,6 @@ fi
 command -v ng>/dev/null && source <(ng completion script)
 
 source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+source $HOME/.dotfiles/zinit.zsh
+source $HOME/.dotfiles/history.zsh
