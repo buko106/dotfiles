@@ -12,7 +12,7 @@ alias ls="gls --color"
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 
 # nodenv
-eval "$(nodenv init -)"
+eval "$(nodenv init - --no-rehash)"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
