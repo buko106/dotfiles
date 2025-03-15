@@ -19,11 +19,3 @@ command -v brew>/dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubuserco
 
 brew tap versent/homebrew-taps # for saml2aws
 brew install coreutils awscli git saml2aws jq ghq nodenv pyenv
-
-# git
-ghq get git@github.com:zsh-git-prompt/zsh-git-prompt.git
-git -C $(ghq list -p zsh-git-prompt/zsh-git-prompt) pull
-
-if [ ! -d "$HOME/.local/share/zinit/zinit.git" ]; then
-    bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
-fi
