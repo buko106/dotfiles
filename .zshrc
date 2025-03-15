@@ -22,11 +22,6 @@ eval "$(pyenv init - --no-rehash)"
 # direnv
 eval "$(direnv hook zsh)"
 
-# FIXME: find modern git status
-source "$(ghq list -p zsh-git-prompt/zsh-git-prompt)/zshrc.sh"
-PROMPT='%c$(git_super_status)$ '
-
-
 source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 source $HOME/.dotfiles/zinit.zsh
