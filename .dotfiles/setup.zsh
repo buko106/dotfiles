@@ -17,5 +17,4 @@ dotfiles config --local status.showUntrackedFiles no
 # homebrew
 command -v brew>/dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew tap versent/homebrew-taps # for saml2aws
 brew install coreutils awscli git saml2aws jq ghq nodenv pyenv

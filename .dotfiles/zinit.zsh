@@ -25,3 +25,4 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 source $HOME/.dotfiles/p10k.zsh
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
+zinit light paulirish/git-open
